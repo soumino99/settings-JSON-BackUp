@@ -1,101 +1,102 @@
 {
-    // セキュリティ設定 (WSL & セキュリティ)
-    "security.allowedUNCHosts": ["wsl.localhost"], // 許可されたUNCホスト
-    "security.workspace.trust.untrustedFiles": "prompt", // 信頼されていないファイルの処理方法
-  
-    // UI設定 (外観 & 使いやすさ)
-    "workbench.colorTheme": "Night Owl", // カラーテーマ
-    "window.zoomLevel": -1, // ウィンドウのズームレベル
-    "editor.fontFamily": "'HackGen'", // エディタのフォントファミリー
-    "editor.minimap.enabled": false, // ミニマップの表示
-    "editor.accessibilitySupport": "auto", // アクセシビリティサポート
-    "explorer.confirmDelete": false, // 削除確認ダイアログの表示
-    "explorer.confirmDragAndDrop": false, // ドラッグ＆ドロップの確認ダイアログの表示
-    "workbench.startupEditor": "none", // 起動時のエディタ
-  
-    // 言語ごとのエディタ設定
-    "[tex]": {
-      "editor.tabSize": 2, // タブサイズ
-      "editor.wordWrap": "on", // ワードラップ
-      "editor.formatOnSave": false, // 保存時のフォーマット
-      "editor.suggest.snippetsPreventQuickSuggestions": false // スニペットのクイックサジェスト
-    },
-    "[latex]": {
-      "editor.tabSize": 2, // タブサイズ
-      "editor.wordWrap": "on", // ワードラップ
-      "editor.formatOnSave": false, // 保存時のフォーマット
-      "editor.suggest.snippetsPreventQuickSuggestions": false // スニペットのクイックサジェスト
-    },
-    "[bibtex]": {
-      "editor.tabSize": 2, // タブサイズ
-      "editor.wordWrap": "on" // ワードラップ
-    },
-  
-    // LaTeX Workshop 設定
-    "latex-workshop.latex.autoBuild.run": "onSave", // 保存時に自動ビルド
-    "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)", // デフォルトのレシピ
-    "latex-workshop.view.pdf.viewer": "tab", // PDFビューア
-    "latex-workshop.latex.keepBibFileWatch": true, // Bibファイルの監視
-    "latex-workshop.message.error.show": true, // エラーメッセージの表示
-    "latex-workshop.message.warning.show": true, // 警告メッセージの表示
-    "latex-workshop.message.info.show": false, // 情報メッセージの表示
-    "latex-workshop.latex.clean.enabled": true, // クリーンアップの有効化
-    "latex-workshop.latex.clean.fileTypes": [
-      "*.aux",
-      "*.bbl",
-      "*.blg",
-      "*.brf",
-      "*.idx",
-      "*.ilg",
-      "*.ind",
-      "*.lof",
-      "*.lot",
-      "*.out",
-      "*.toc",
-      "*.synctex.gz" // クリーンアップするファイルタイプ
-    ],
-    "latex-workshop.bind.key": {
-      "ctrl+alt+b": "latex-workshop.build", // ビルドのショートカット
-      "ctrl+alt+p": "latex-workshop.view" // ビューのショートカット
-    },
-  
-    // Markdown / Mermaid 設定
-    "markdown-pdf.mermaidServer": "https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js", // Mermaidサーバー
-    "markdown-preview-enhanced.previewTheme": "atom-light.css", // プレビューのテーマ
-    "markdown.preview.scrollEditorWithPreview": true, // プレビューとエディタのスクロール同期
-  
-    // Git / GitLens / Git Graph設定
-    "git.autofetch": true, // 自動フェッチ
-    "git.enableSmartCommit": true, // スマートコミットの有効化
-    "git.confirmSync": false, // 同期確認ダイアログの表示
-    "gitlens.currentLine.enabled": true, // 現在行のGit情報表示
-    "gitlens.hovers.enabled": true, // ホバー情報の表示
-    "git-graph.showInSideBar": true, // サイドバーに表示
-    "git-graph.showInStatusBar": true, // ステータスバーに表示
-    "git-graph.defaultColumnVisibility": {
-      "Date": true, // 日付列の表示
-      "Author": true, // 著者列の表示
-      "Commit": true // コミット列の表示
-    },
-    "git-graph.dateFormat": "YYYY-MM-DD HH:mm:ss", // 日付フォーマット
-    "git-graph.retainContextWhenHidden": true, // 非表示時にコンテキストを保持
-  
-    // その他の開発環境設定
-    "cmake.configureOnOpen": true, // 開いたときにCMakeを構成
-    "code-runner.runInTerminal": true, // ターミナルで実行
-    "python.createEnvironment.trigger": "off", // Python環境の作成トリガー
-    "editor.unicodeHighlight.ambiguousCharacters": false, // 曖昧な文字のハイライト
-    "editor.unicodeHighlight.invisibleCharacters": false, // 見えない文字のハイライト
-    "window.confirmSaveUntitledWorkspace": false, // 無題ワークスペースの保存確認
-    "remoteHub.commitDirectlyWarning": "off", // 直接コミットの警告
-    "redhat.telemetry.enabled": true, // テレメトリーの有効化
-    "RainbowBrackets.depreciation-notice": false, // 廃止通知の表示
-    "yaml.schemas": {
-      "file:///c%3A/Users/soumi/.vscode/extensions/atlassian.atlascode-3.4.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml" // YAMLスキーマ
-    },
-  
-    // パフォーマンス向上
-    "editor.largeFileOptimizations": true, // 大きなファイルの最適化
-    "files.autoSave": "afterDelay" // 自動保存
-  }
-  
+  // セキュリティ設定 (WSL & セキュリティ)
+  "security.allowedUNCHosts": ["wsl.localhost"], // 許可されたUNCホスト
+  "security.workspace.trust.untrustedFiles": "prompt", // 信頼されていないファイルの処理方法
+
+  // UI設定 (外観 & 使いやすさ)
+  "workbench.colorTheme": "Night Owl", // カラーテーマ
+  "window.zoomLevel": -1, // ウィンドウのズームレベル
+  "editor.fontFamily": "'HackGen'", // エディタのフォントファミリー
+  "editor.minimap.enabled": false, // ミニマップの表示
+  "editor.accessibilitySupport": "auto", // アクセシビリティサポート
+  "explorer.confirmDelete": false, // 削除確認ダイアログの表示
+  "explorer.confirmDragAndDrop": false, // ドラッグ＆ドロップの確認ダイアログの表示
+  "workbench.startupEditor": "none", // 起動時のエディタ
+
+  // 言語ごとのエディタ設定
+  "[tex]": {
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "[latex]": {
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "[bibtex]": {
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on"
+  },
+
+  // LaTeX Workshop 設定
+  "latex-workshop.latex.autoBuild.run": "onSave", // 保存時に自動ビルド
+  "latex-workshop.latex.recipe.default": "latexmk (latexmkrc)", // デフォルトのレシピ
+  "latex-workshop.view.pdf.viewer": "tab", // PDFビューア
+  "latex-workshop.latex.keepBibFileWatch": true, // Bibファイルの監視
+  "latex-workshop.message.error.show": true, // エラーメッセージの表示
+  "latex-workshop.message.warning.show": true, // 警告メッセージの表示
+  "latex-workshop.message.info.show": false, // 情報メッセージの表示
+  "latex-workshop.latex.clean.enabled": true, // クリーンアップの有効化
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.brf",
+    "*.idx",
+    "*.ilg",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.synctex.gz"
+  ],
+  "latex-workshop.latex.outDir": "./out", // すべての出力を out/ に保存
+
+  "latex-workshop.bind.key": {
+    "ctrl+alt+b": "latex-workshop.build",
+    "ctrl+alt+p": "latex-workshop.view"
+  },
+
+  // Markdown / Mermaid 設定
+  "markdown-pdf.mermaidServer": "https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js",
+  "markdown-preview-enhanced.previewTheme": "atom-light.css",
+  "markdown.preview.scrollEditorWithPreview": true,
+
+  // Git / GitLens / Git Graph設定
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.enabled": true,
+  "git-graph.showInSideBar": true,
+  "git-graph.showInStatusBar": true,
+  "git-graph.defaultColumnVisibility": {
+    "Date": true,
+    "Author": true,
+    "Commit": true
+  },
+  "git-graph.dateFormat": "YYYY-MM-DD HH:mm:ss",
+  "git-graph.retainContextWhenHidden": true,
+
+  // その他の開発環境設定
+  "cmake.configureOnOpen": true,
+  "code-runner.runInTerminal": true,
+  "python.createEnvironment.trigger": "off",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "window.confirmSaveUntitledWorkspace": false,
+  "remoteHub.commitDirectlyWarning": "off",
+  "redhat.telemetry.enabled": true,
+  "RainbowBrackets.depreciation-notice": false,
+  "yaml.schemas": {
+    "file:///c%3A/Users/soumi/.vscode/extensions/atlassian.atlascode-3.4.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+
+  // パフォーマンス向上
+  "editor.largeFileOptimizations": true,
+  "files.autoSave": "afterDelay"
+}
