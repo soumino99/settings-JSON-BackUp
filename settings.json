@@ -23,7 +23,8 @@
   "[latex]": {
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
   "[bibtex]": {
