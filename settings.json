@@ -87,6 +87,18 @@
         "-output-directory=out",
         "%DOCFILE%"
       ]
+    },
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=out",
+        "%DOC%"
+      ]
     }
   ],
   // ビルドレシピの設定
@@ -104,6 +116,12 @@
         "pbibtex",
         "ptex2pdf",
         "ptex2pdf"
+      ]
+    },
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
       ]
     }
   ],
@@ -161,5 +179,6 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true
-  }
+  },
+  "latex-workshop.latex.autoBuild.run": "onSave"
 }
