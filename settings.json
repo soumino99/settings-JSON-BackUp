@@ -1,15 +1,18 @@
 {
-  "security.allowedUNCHosts": ["wsl.localhost"],
-  "security.workspace.trust.untrustedFiles": "prompt",
-  "workbench.colorTheme": "Night Owl",
-  "window.zoomLevel": -1,
+  // ========================
+  // 1. エディタの基本設定
+  // ========================
   "editor.fontFamily": "'HackGen'",
   "editor.minimap.enabled": false,
   "editor.accessibilitySupport": "auto",
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "workbench.startupEditor": "none",
+  "editor.largeFileOptimizations": true,
+  "editor.formatOnSave": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
 
+  // ========================
+  // 2. 言語別のエディタ設定
+  // ========================
   "[tex]": {
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
@@ -32,42 +35,18 @@
     "editor.formatOnSave": true
   },
 
-  "markdown-pdf.mermaidServer": "https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js",
-  "markdown-preview-enhanced.previewTheme": "none.css",
-  "markdown.preview.scrollEditorWithPreview": true,
-
-  "git.autofetch": true,
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "gitlens.currentLine.enabled": true,
-  "gitlens.hovers.enabled": true,
-  "git-graph.showInSideBar": true,
-  "git-graph.showInStatusBar": true,
-  "git-graph.defaultColumnVisibility": {
-    "Date": true,
-    "Author": true,
-    "Commit": true
-  },
-  "git-graph.dateFormat": "YYYY-MM-DD HH:mm:ss",
-  "git-graph.retainContextWhenHidden": true,
-
-  "cmake.configureOnOpen": true,
-  "code-runner.runInTerminal": true,
-  "python.createEnvironment.trigger": "off",
-  "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "window.confirmSaveUntitledWorkspace": false,
-  "remoteHub.commitDirectlyWarning": "off",
-  "redhat.telemetry.enabled": true,
-  "RainbowBrackets.depreciation-notice": false,
-
-  "yaml.schemas": {
-    "file:///c%3A/Users/soumi/.vscode/extensions/atlassian.atlascode-3.4.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
-  },
-
-  "editor.largeFileOptimizations": true,
-  "files.autoSave": "afterDelay",
-
+  // ========================
+  // 3. LaTeX Workshop 関連設定
+  // ========================
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "latexmk",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latexindent.path": "latexindent",
+  "latex-workshop.latexindent.args": [
+    "%TMPFILE%",
+    "-c=%DIR%/",
+    "-y=defaultIndent: '%INDENT%'"
+  ],
   "latex-workshop.latex.tools": [
     {
       "name": "ptex2pdf",
@@ -106,7 +85,6 @@
       "tools": ["latexmk"]
     }
   ],
-  "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.latex.clean.fileTypes": [
     "out/*.aux",
@@ -134,22 +112,41 @@
     "out/*.vrb"
   ],
 
-  "editor.formatOnSave": true,
+  // ========================
+  // 4. Git・バージョン管理
+  // ========================
+  "git.autofetch": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.enabled": true,
+  "git-graph.showInSideBar": true,
+  "git-graph.showInStatusBar": true,
+  "git-graph.defaultColumnVisibility": {
+    "Date": true,
+    "Author": true,
+    "Commit": true
+  },
+  "git-graph.dateFormat": "YYYY-MM-DD HH:mm:ss",
+  "git-graph.retainContextWhenHidden": true,
 
-  "latex-workshop.latexindent.path": "latexindent",
-  "latex-workshop.latexindent.args": [
-    "%TMPFILE%",
-    "-c=%DIR%/",
-    "-y=defaultIndent: '%INDENT%'"
-  ],
-
-  "workbench.editorAssociations": {
-    "*.pdf": "latex-workshop-pdf-hook"
+  // ========================
+  // 5. 拡張機能・開発支援
+  // ========================
+  "cmake.configureOnOpen": true,
+  "code-runner.runInTerminal": true,
+  "python.createEnvironment.trigger": "off",
+  "RainbowBrackets.depreciation-notice": false,
+  "redhat.telemetry.enabled": true,
+  "remoteHub.commitDirectlyWarning": "off",
+  "yaml.schemas": {
+    "file:///c%3A/Users/soumi/.vscode/extensions/atlassian.atlascode-3.4.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
 
-  "database-client.autoSync": true,
-  "workbench.iconTheme": "material-icon-theme",
-
+  // ========================
+  // 6. ファイル操作・保存
+  // ========================
+  "files.autoSave": "afterDelay",
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -157,6 +154,27 @@
     "**/CVS": true,
     "**/.DS_Store": true
   },
+  "window.confirmSaveUntitledWorkspace": false,
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
 
-  "latex-workshop.latex.autoBuild.run": "onSave"
+  // ========================
+  // 7. 外観・UI系
+  // ========================
+  "workbench.colorTheme": "Night Owl",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": -1,
+
+  // ========================
+  // 8. セキュリティ・信頼関係
+  // ========================
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "security.workspace.trust.untrustedFiles": "prompt",
+
+  // ========================
+  // 9. その他
+  // ========================
+  "database-client.autoSync": true
 }
