@@ -15,101 +15,39 @@
   // ========================
   "[tex]": {
     "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "editor.formatOnSave": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
   "[latex]": {
     "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "James-Yu.latex-workshop",
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
   "[bibtex]": {
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on"
-  },
-  "[cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools",
-    "editor.formatOnSave": true
+    "editor.tabSize": 2
   },
 
   // ========================
   // 3. LaTeX Workshop 関連設定
   // ========================
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.recipe.default": "latexmk",
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latexindent.path": "latexindent",
-  "latex-workshop.latexindent.args": [
-    "%TMPFILE%",
-    "-c=%DIR%/",
-    "-y=defaultIndent: '%INDENT%'"
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out",
+    "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist",
+    "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.nav", "*.dvi", "*.ilg", "*.synctex.gz"
   ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "ptex2pdf",
-      "command": "ptex2pdf",
-      "args": ["-l", "-ot", "-kanji=utf8", "-synctex=1", "-output-directory=out", "%DOC%"]
-    },
-    {
-      "name": "pbibtex",
-      "command": "pbibtex",
-      "args": ["-kanji=utf8", "-output-directory=out", "%DOCFILE%"]
-    },
-    {
-      "name": "latexmk",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "-outdir=out",
-        "%DOC%"
-      ]
-    }
-  ],
+  "latex-workshop.latex.outDir": "out",
   "latex-workshop.latex.recipes": [
-    {
-      "name": "ptex2pdf",
-      "tools": ["ptex2pdf"]
-    },
-    {
-      "name": "ptex2pdf -> pbibtex -> ptex2pdf*2",
-      "tools": ["ptex2pdf", "pbibtex", "ptex2pdf", "ptex2pdf"]
-    },
     {
       "name": "latexmk",
       "tools": ["latexmk"]
     }
   ],
-  "latex-workshop.latex.autoClean.run": "onBuilt",
-  "latex-workshop.latex.clean.fileTypes": [
-    "out/*.aux",
-    "out/*.bbl",
-    "out/*.blg",
-    "out/*.idx",
-    "out/*.ind",
-    "out/*.lof",
-    "out/*.lot",
-    "out/*.out",
-    "out/*.toc",
-    "out/*.acn",
-    "out/*.acr",
-    "out/*.alg",
-    "out/*.glg",
-    "out/*.glo",
-    "out/*.gls",
-    "out/*.ist",
-    "out/*.fls",
-    "out/*.log",
-    "out/*.fdb_latexmk",
-    "out/*.synctex.gz",
-    "out/*.nav",
-    "out/*.snm",
-    "out/*.vrb"
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": ["-silent", "-outdir=out", "%DOC%"]
+    }
   ],
 
   // ========================
