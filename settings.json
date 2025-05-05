@@ -1,10 +1,6 @@
 {
-  // セキュリティ設定 (WSL & セキュリティ)
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
+  "security.allowedUNCHosts": ["wsl.localhost"],
   "security.workspace.trust.untrustedFiles": "prompt",
-  // UI設定 (外観 & 使いやすさ)
   "workbench.colorTheme": "Night Owl",
   "window.zoomLevel": -1,
   "editor.fontFamily": "'HackGen'",
@@ -13,7 +9,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "workbench.startupEditor": "none",
-  // 言語ごとのエディタ設定
+
   "[tex]": {
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
@@ -31,11 +27,15 @@
     "editor.tabSize": 2,
     "editor.wordWrap": "on"
   },
-  // Markdown / Mermaid 設定
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnSave": true
+  },
+
   "markdown-pdf.mermaidServer": "https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js",
   "markdown-preview-enhanced.previewTheme": "none.css",
   "markdown.preview.scrollEditorWithPreview": true,
-  // Git / GitLens / Git Graph設定
+
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
@@ -50,7 +50,7 @@
   },
   "git-graph.dateFormat": "YYYY-MM-DD HH:mm:ss",
   "git-graph.retainContextWhenHidden": true,
-  // その他の開発環境設定
+
   "cmake.configureOnOpen": true,
   "code-runner.runInTerminal": true,
   "python.createEnvironment.trigger": "off",
@@ -60,34 +60,24 @@
   "remoteHub.commitDirectlyWarning": "off",
   "redhat.telemetry.enabled": true,
   "RainbowBrackets.depreciation-notice": false,
+
   "yaml.schemas": {
     "file:///c%3A/Users/soumi/.vscode/extensions/atlassian.atlascode-3.4.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
   },
-  // パフォーマンス向上
+
   "editor.largeFileOptimizations": true,
   "files.autoSave": "afterDelay",
-  // LaTeXのビルドツールの設定
+
   "latex-workshop.latex.tools": [
     {
       "name": "ptex2pdf",
       "command": "ptex2pdf",
-      "args": [
-        "-l",
-        "-ot",
-        "-kanji=utf8",
-        "-synctex=1",
-        "-output-directory=out",
-        "%DOC%"
-      ]
+      "args": ["-l", "-ot", "-kanji=utf8", "-synctex=1", "-output-directory=out", "%DOC%"]
     },
     {
       "name": "pbibtex",
       "command": "pbibtex",
-      "args": [
-        "-kanji=utf8",
-        "-output-directory=out",
-        "%DOCFILE%"
-      ]
+      "args": ["-kanji=utf8", "-output-directory=out", "%DOCFILE%"]
     },
     {
       "name": "latexmk",
@@ -102,33 +92,21 @@
       ]
     }
   ],
-  // ビルドレシピの設定
   "latex-workshop.latex.recipes": [
     {
       "name": "ptex2pdf",
-      "tools": [
-        "ptex2pdf"
-      ]
+      "tools": ["ptex2pdf"]
     },
     {
       "name": "ptex2pdf -> pbibtex -> ptex2pdf*2",
-      "tools": [
-        "ptex2pdf",
-        "pbibtex",
-        "ptex2pdf",
-        "ptex2pdf"
-      ]
+      "tools": ["ptex2pdf", "pbibtex", "ptex2pdf", "ptex2pdf"]
     },
     {
       "name": "latexmk",
-      "tools": [
-        "latexmk"
-      ]
+      "tools": ["latexmk"]
     }
   ],
-  // PDFプレビューの設定
   "latex-workshop.view.pdf.viewer": "tab",
-  // 自動クリーンアップの設定
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.latex.clean.fileTypes": [
     "out/*.aux",
@@ -155,25 +133,23 @@
     "out/*.snm",
     "out/*.vrb"
   ],
-  // エディタの設定
+
   "editor.formatOnSave": true,
-  "[latex]": {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
-  },
-  // LaTeXインデントの設定
+
   "latex-workshop.latexindent.path": "latexindent",
   "latex-workshop.latexindent.args": [
     "%TMPFILE%",
     "-c=%DIR%/",
     "-y=defaultIndent: '%INDENT%'"
   ],
-  // PDFファイルをLaTeX Workshopで開く設定
+
   "workbench.editorAssociations": {
     "*.pdf": "latex-workshop-pdf-hook"
   },
+
   "database-client.autoSync": true,
   "workbench.iconTheme": "material-icon-theme",
+
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
@@ -181,5 +157,6 @@
     "**/CVS": true,
     "**/.DS_Store": true
   },
+
   "latex-workshop.latex.autoBuild.run": "onSave"
 }
