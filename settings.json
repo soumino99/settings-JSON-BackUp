@@ -114,5 +114,6 @@
   // ========================
   // 9. その他
   // ========================
-  "database-client.autoSync": true
+  "database-client.autoSync": true,
+  "markdown-preview-enhanced.exportPdf.engine": "chromium"
 }
