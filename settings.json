@@ -36,6 +36,9 @@
     "*.fls", "*.log", "*.fdb_latexmk", "*.snm", "*.nav", "*.dvi", "*.ilg", "*.synctex.gz"
   ],
   "latex-workshop.latex.outDir": "out",
+  "latex-workshop.latex.rootFile.useSubFile": false,
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.rootFile.default": "main.tex",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -115,5 +118,6 @@
   // 9. その他
   // ========================
   "database-client.autoSync": true,
-  "markdown-preview-enhanced.exportPdf.engine": "chromium"
+  "markdown-preview-enhanced.exportPdf.engine": "chromium",
+  "markdown-preview-enhanced.enablePreviewZenMode": false
 }
