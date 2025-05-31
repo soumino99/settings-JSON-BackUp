@@ -9,7 +9,8 @@
   "editor.formatOnSave": true,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.unicodeHighlight.invisibleCharacters": false,
-
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100
   // ========================
   // 2. 言語別のエディタ設定
   // ========================
@@ -59,7 +60,6 @@
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "gitlens.currentLine.enabled": true,
   "gitlens.hovers.enabled": true,
   "git-graph.showInSideBar": true,
   "git-graph.showInStatusBar": true,
@@ -103,7 +103,7 @@
   // ========================
   // 7. 外観・UI系
   // ========================
-  "workbench.colorTheme": "Night Owl",
+  "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "window.zoomLevel": -1,
